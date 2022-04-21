@@ -1,0 +1,18 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "bare-server-node": "github:tomphttp/bare-server-node",
+    "browserify": "^17.0.0",
+    "ev-emitter": "^2.1.2",
+    "get-size": "^3.0.0",
+    "jquery": "^3.6.0",
+    "mine": "^0.1.0",
+    "nginx": "^1.0.7",
+    "node-fetch": "^3.2.3",
+    "node-static": "^0.7.11",
+    "Rhodium": "github:ludicrousdevelopment/rhodium",
+    "unidragger": "^3.0.1",
+    "unipointer": "^2.4.0",
+    "ws": "^8.5.0"
+  }
+}
