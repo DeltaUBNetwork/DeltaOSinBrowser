@@ -21,7 +21,7 @@ function tabAdd (data) {
 
   // iframe url
   let url = data.detail.tabEl.getAttribute("url");
-  iframe.src = location.protocol +  + "//" + location.hostname +"/newtab.html"  
+  iframe.src = location.protocol + "//" + location.hostname +"/newtab.html"  
 
   // add iframe element to document
   document.querySelector(".browser-tab-content").appendChild(iframe);
