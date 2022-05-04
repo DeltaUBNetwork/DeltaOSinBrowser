@@ -97,7 +97,9 @@ setInterval(() => {
   }
 }, 1);
 
-_browser_.chromeTabs.addTab({
+let sure = _browser_.chromeTabs.addTab({
     title: "Main page",
     favicon: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F25%2FGoogle_Classroom_icon.svg%2F1200px-Google_Classroom_icon.svg.png&f=1&nofb=1",
   });
+
+_browser_.chromeTabs.setCurrentTab(document.querySelector('.chrome-tab'));

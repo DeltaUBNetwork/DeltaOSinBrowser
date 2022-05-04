@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   
   <head>
@@ -8,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+<script src='https://rawcdn.githack.com/nextapps-de/winbox/0.2.0/dist/winbox.bundle.js'></script>
     <script src="/js/draggabilly.js" type="module"></script>
     
     <script src="/js/index.js" type="module"></script>
@@ -17,124 +18,58 @@
   </head>
   
   <body class="dark-theme">
+      
+    <div class="mainstuff">
 
-    <!-- Tab bar -->
-    <div class="chrome-tabs" style="--tab-content-margin: 9px">
-      <div class="chrome-tabs-content">
+
+      <div class="mainmain">
+           
+        <div class="appe" onclick="openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html')">
+          <img src='https://google.com/favicon.ico'>  <div style='color: rgb(0,255,0); text-align: center; margin-top: 4px;'>Chromium</div>
+        </div>
+       <div class="appe">
+        <img src="https://google.com/favicon.ico">
+        <div style='color: rgb(0,255,0); text-align: center; margin-top: 4px;'>Chromium</div>
       </div>
-      <div class="new-tab-button-wrapper">
-        <button class="new-tab-button">&#65291;</button>
-      </div>
-      <div class="chrome-tabs-bottom-bar"></div>
+      
     </div>
-    <div id="contextMenu" class="context-menu">
-				<ul>
-					<li class='closeta'>Close (CTRL-W)</li>
-          <li class="separator"></li>
-          <li class='dupeta'>Duplicate (CTRL-D)</li>
-          <li class="separator"></li>
-           <li class='reloadta'>Reload (CTRL-R)</li>
-				
-				</ul>
-			</div>
-   
-    <!-- Url bar -->
-    <div class="browser-bar">
-      
-      <div id="pageBack" style='align-self: self-start;'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill-rule="evenodd" class="browser-bar-btn browser-bar-btn-disabled" viewBox="0 0 32 32">
-          <path stroke-width="0px" stroke-linecap="round" shape-rendering="geometricPrecision" d="M 4.22 14.03 C 3.53 14.15 3 14.77 3 15.5 C 3 16.25 3.53 16.86 4.24 16.98 L 4.02 17.19 L 14.36 27.51 C 14.65 27.81 15.05 28 15.5 28 C 16.33 28 17 27.33 17 26.5 C 17 26.05 16.8 25.65 16.49 25.38 L 16.55 25.32 L 8.22 17 L 27.51 17 C 28.33 17 29 16.33 29 15.5 C 29 14.67 28.33 14 27.51 14 L 8.2 14 L 16.55 5.66 C 16.81 5.34 17 4.94 17 4.5 C 17 3.68 16.33 3 15.5 3 C 15.06 3 14.66 3.2 14.39 3.5 L 14.36 3.47 L 4 13.81 Z"></path>
-        </svg>
       </div>
-      
-      <div style="height: 1px; width: 5px;"></div>
-      
-      <div id="pageForward"style='align-self: self-start;'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill-rule="evenodd" class="browser-bar-btn browser-bar-btn-disabled" viewBox="0 0 32 32">
-          <path stroke-width="0px" stroke-linecap="round" shape-rendering="geometricPrecision" d="M 27.78 14.03 C 28.47 14.15 29 14.77 29 15.5 C 29 16.25 28.47 16.86 27.76 16.98 L 27.98 17.19 L 17.64 27.51 C 17.35 27.81 16.95 28 16.5 28 C 15.67 28 15 27.33 15 26.5 C 15 26.05 15.2 25.65 15.51 25.38 L 15.45 25.32 L 23.78 17 L 4.49 17 C 3.67 17 3 16.33 3 15.5 C 3 14.67 3.67 14 4.49 14 L 23.8 14 L 15.45 5.66 C 15.19 5.34 15 4.94 15 4.5 C 15 3.68 15.67 3 16.5 3 C 16.94 3 17.34 3.2 17.61 3.5 L 17.64 3.47 L 28 13.81 Z"></path>
-        </svg>
-      </div>
-      
-      <div style="height: 1px; width: 5px;"></div>
-      
-      <div id="pageReload"style='align-self: self-start;'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill-rule="evenodd" class="browser-bar-btn browser-bar-btn-enabled" viewBox="0 0 32 32">
-          <path stroke-width="0px" stroke-linecap="round" shape-rendering="geometricPrecision" d="M 25.1 20.15 L 25.08 20.14 C 23.51 23.59 20.04 26 16 26 C 10.48 26 6 21.52 6 16 C 6 10.48 10.48 6 16 6 C 19.02 6 21.72 7.34 23.55 9.45 L 23.55 9.45 L 19 14 L 25.8 14 L 28.83 14 L 30 14 L 30 3 L 25.67 7.33 C 23.3 4.67 19.85 3 16 3 C 8.82 3 3 8.82 3 16 C 3 23.18 8.82 29 16 29 C 21.27 29 25.8 25.86 27.84 21.34 C 27.96 21.13 28.03 20.88 28.03 20.61 C 28.03 19.78 27.36 19.11 26.53 19.11 C 25.87 19.11 25.3 19.55 25.1 20.15 Z"></path>
-        </svg>
-       <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill-rule="evenodd" class="browser-bar-btn browser-bar-btn-enabled" viewBox="0 0 32 32">
-          
-        </svg>-->
-      </div>
-      <div style="height: 1px; width: 8px;"></div>
-      
-      <div class="addressbar" style='outline: none; background-color: rgb(241, 243, 244);align-self: self-start;'>
-        <div style="height: 1px; width: 5px;"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill-rule="evenodd" class="browser-bar-btn addressbar-btn" viewBox="0 0 20 20">
-          <path stroke-width="0px" stroke-linecap="round" shape-rendering="geometricPrecision" d="M 9 14 h 2 v -4 H 9 v 4 Z m 1 -12 c -4.42 0 -8 3.58 -8 8 c 0 4.42 3.58 8 8 8 c 4.42 0 8 -3.58 8 -8 c 0 -4.42 -3.58 -8 -8 -8 Z m 0 14 c -3.31 0 -6 -2.69 -6 -6 c 0 -3.31 2.69 -6 6 -6 c 3.31 0 6 2.69 6 6 c 0 3.31 -2.69 6 -6 6 Z M 9 8 h 2 V 6 H 9 v 2 Z"></path>
-        </svg>
-        <div class="addressbar-urlbar" contenteditable="true" spellcheck="false" id='proi'></div>
-      </div>
-      <div class='bookmarktab'style='align-self: self-start;'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-bookmark-star" viewBox="0 0 16 16">
-  <path d="M7.84 4.1a.178.178 0 0 1 .32 0l.634 1.285a.178.178 0 0 0 .134.098l1.42.206c.145.021.204.2.098.303L9.42 6.993a.178.178 0 0 0-.051.158l.242 1.414a.178.178 0 0 1-.258.187l-1.27-.668a.178.178 0 0 0-.165 0l-1.27.668a.178.178 0 0 1-.257-.187l.242-1.414a.178.178 0 0 0-.05-.158l-1.03-1.001a.178.178 0 0 1 .098-.303l1.42-.206a.178.178 0 0 0 .134-.098L7.84 4.1z"/>
-  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-</svg>
-      </div>
-      <div style="height: 5px; width: 5px;"></div>
-      <div id="userprofile"style='align-self: self-start;'>
-        <img src='ayit.svg'width="40" height="40">
-      </div>
-      <div style="height: 5px; width: 5px;"></div>
-      <div id="settingsMenuT"style='align-self: self-start;'>
-        <style>
-          
-        </style>
- <script>
-   function okaylol(){
-     if (document.getElementById('settingsMenu').style.display == 'none'){
-    	var contextMenu2 = document.getElementById('settingsMenu').style.display = 'block'
-       
-     } else {
-       document.getElementById('settingsMenu').style.display = 'none'
-     }
-   }
- </script>
-    <svg viewBox="0 0 100 80" width="40" height="40" onclick='okaylol()' class='okri'>
-  <rect width="100" height="20"></rect>
-  <rect y="30" width="100" height="20"></rect>
-  <rect y="60" width="100" height="20"></rect>
-   </svg> 
-
      
-      <div id="settingsMenu" class="context-menu" style='display: none;
-    position: absolute;right:0;'>
-				<ul>
-					<li>History</li>
-         
-          <li>Extensions</li>
-          <li>Bookmarks</li>
-          <li class="separator"></li>
-          
-          <li onclick='function ok(){var printwin = window.open(document.querySelector(`.browser-tab-content-iframe[active]`).src);
-printwin.document.write(document.querySelector(`.browser-tab-content-iframe[active]`).contentWindow.document.body.innerHTML);
-printwin.print()}; 
-                        
-ok();    '>Print (CTRL-P)</li>
-               <li class="separator"></li>
-           <li onclick='function o(){javascript:(function () { var script = document.createElement("script"); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
-}; o();'>Developer Tools (CTRL-SHIFT-I)</li>
-				               <li class="separator"></li>
-                     <li>Settings</li>
-
-				</ul>
-			</div>
+    </div>
+<div class='taskbar' style='border-radius: 10px;'>
+  <div class='pp'>
+  <div class='theiconsmain'>
+    <div class='alltheicons'>
+      <div class='iconhold' style='display: grid; place-items: center;'>
+        <img src='https://google.com/favicon.ico'>
       </div>
+    </div>
+  </div>
+  <div class='othershit'>
+    <div class='timeandstuff'>
+     
+        <div>6:09 PM</div>
       
+  
     </div>
-
-    <!-- Content -->
-    <div class="browser-tab-content">
-    </div>
+  </div>
+  
+  </div>
+</div>
+   <script>
+     function openWindow(title, url){
+          new WinBox({
+       url: url,
+       title: title,
+       width: "75%",
+       height: "75%",
+x: "center",
+       y: "center"
+      
+     })
+     }
+ 
+   </script>
 
     <script src='index.js'></script>
       <script src="uv/uv.bundle.js"></script>
@@ -142,23 +77,6 @@ ok();    '>Print (CTRL-P)</li>
     <script type="text/javascript">
 
 
-		</script>
-    <script>
-      document.addEventListener('keydown', logKey)
-            function logKey(event) {
-                if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
-                event.preventDefault();
-                function ortoi(){javascript:(function () { var script = document.createElement("script"); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() alert("Loaded dev tools, click the button") } })();
-                          
-            } else if (event.ctrlKey && event.keyCode == 80){
-                  event.preventDefault();
-                  function okiirrts(){var printwin = window.open(document.querySelector(`.browser-tab-content-iframe[active]`).src);
-printwin.document.write(document.querySelector(`.browser-tab-content-iframe[active]`).contentWindow.document.body.innerHTML);
-printwin.print()}; 
-                        
-okiirrts();
-            }
-     };
-    </script>
+	
   </body>
 </html>

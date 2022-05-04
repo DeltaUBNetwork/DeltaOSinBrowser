@@ -213,8 +213,8 @@ class ChromeTabs {
   }
 
   addTab(tabProperties) {
-    if(tabProperties.url !== "https://genow.cf/newtab.html" && !tabProperties.title) tabProperties.title = tabProperties.url;
-    if(tabProperties.url !== "https://genow.cf/newtab.html") tabProperties.favicon = `https://www.google.com/s2/favicons?domain=${tabProperties.url}`;
+    if(tabProperties.url !== location.protocol + location.hostname + "/newtab.html" && !tabProperties.title) tabProperties.title = tabProperties.url;
+    if(tabProperties.url !== location.protocol + + "//" +  location.hostname +"/newtab.html") tabProperties.favicon = `https://www.google.com/s2/favicons?domain=${tabProperties.url}`;
     tabProperties = Object.assign({}, defaultTapProperties, tabProperties);
       
     const tabEl = this.createNewTabEl(tabProperties.url);

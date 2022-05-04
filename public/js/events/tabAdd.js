@@ -6,8 +6,8 @@ function tabAdd (data) {
   // setup iframe
   const iframe = document.createElement("iframe");
   iframe.classList.add("browser-tab-content-iframe");
-  iframe.setAttribute("sandbox", "allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts");
-  iframe.setAttribute("referrerpolicy", "no-referrer");
+  //iframe.setAttribute("sandbox", "allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts"); IDC LMFAO
+  iframe.setAttribute("referrerpolicy", "origin");
   iframe.setAttribute("tabid", id);
   iframe.setAttribute("loading", true);
 
@@ -21,7 +21,7 @@ function tabAdd (data) {
 
   // iframe url
   let url = data.detail.tabEl.getAttribute("url");
-  iframe.src = "https://genow.cf/newtab.html"  
+  iframe.src = location.protocol +  + "//" + location.hostname +"/newtab.html"  
 
   // add iframe element to document
   document.querySelector(".browser-tab-content").appendChild(iframe);
@@ -29,6 +29,7 @@ function tabAdd (data) {
   // update loop
   let title = "";
   let favicon = "";
+  
   const loop = setInterval(() => {
     // parse url
     const newUrl = _browser_.decodeUrl(iframe.contentWindow.location.href.split("/service/")[1]);

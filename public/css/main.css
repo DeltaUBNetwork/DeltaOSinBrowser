@@ -21,7 +21,114 @@
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   vertical-align: baseline;
 }
+.taskbar{
+ backdrop-filter: saturate(3) blur(15px);
+ background:  #292020;
+  
+  bottom: 0;
+  color: rgb(0,0,0);
+  height: 48px;
+  position: absolute;
+  width: 100%;
+  
+}
+.timeandstuff{
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  justify-content: center;
+  padding: 0 8px;
+}
+.wb-body::-webkit-scrollbar {
+    width: 12px;
+}
+.wb-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+.wb-body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #263040;
+}
+.wb-body::-webkit-scrollbar-thumb:window-inactive {
+    background: #181f2a;
+}
+.wb-body::-webkit-scrollbar-corner {
+    background: transparent;
+}
+.mainstuff{
+  height: calc(100vh - 48px);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background:  url('ewq.png') #000000b6;
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.theiconsmain{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.iconhold{
+  height: 38px;
+  box-sizing: border-box;
+  margin: auto 3px;
+  position: relative;
+  width: 38px;
+  
+}
+.alltheicons{
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: auto;
+}
 
+.mainmain{
+  flex-wrap: wrap;
+  height: 100%;
+  width: 0;
+}
+.appe{
+  align-items: center;
+  font-size: .8em;
+  height: 86px;
+  justify-content: center;
+  margin: 4px;
+  width: 76px;
+  display: flex;
+  flex-direction: column;
+}
+.othershit{
+  margin-left: 10px;
+  right: 0;
+  top: 0;
+  position: absolute;
+  width:auto;
+  align-items: center;
+  display: flex;
+  height: 100%;
+ 
+  
+}
+.pp{
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+
+.timeandstuff div{
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  color: #29CB39;
+}
 #root,
 body,
 html {
@@ -29,6 +136,7 @@ html {
 }
 body {
   margin: 0;
+  overflow: hidden!important;
 }
 
 .dark {
@@ -42,8 +150,26 @@ body {
   display: flex;
   flex-wrap: nowrap;
   flex-flow: row;
-  height: 70px;
+  height: 40px;
   padding: 4px 15px;
+  border: none;
+}
+.theicon{
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.realicon{
+  width: 1rem;
+  height: 1rem;
+}
+.examplebookmark{
+  margin-left: 0.5rem;
+  margin-right: 0.25rem;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  
 }
 
 .dark .browser-bar {
@@ -63,7 +189,49 @@ body {
   transition: 0.2s;
   width: 20px;
 }
+.winbox{
+  border-radius: 6px;
+  background: #e7eaec;
+}
 
+
+.wb-min {
+    background-image: url('min.png');
+    background-size: 15px center;
+    border-radius: 3px;
+}
+.wb-icon * {
+    opacity: 0.65;
+}
+
+.wb-icon *:hover {
+    opacity: 1;
+}
+.wb-max {
+    background-image: url('max.png');
+     background-size: 15px center;
+    border-radius: 3px;
+}
+
+.wb-close {
+    background-image: url('close.png');
+     background-size: 15px center;
+  border-radius: 3px;
+}
+.wb-close:hover{
+  background-color: red;
+}
+
+
+.wb-title{
+  text-shadow: 0px 3px rgba(0,0,0,.30);
+  color: rgb(0,255,0);
+}
+.wb-body{
+  margin: 4px;
+  color: #bb7272;
+  background: #ffffff;
+}
 .dark .browser-bar-btn {
   fill: var(--dark-addressbar-btn-enabled);
   stroke: var(--dark-addressbar-btn-enabled);
@@ -260,6 +428,7 @@ background-color: transparent;
   border: none;
   height: calc(100vh - 91px);
   width: 100%;
+  overflow: auto !important;
 }
 
 .browser-tab-content-iframe[active] {
@@ -362,6 +531,8 @@ background-color: transparent;
 .chrome-tabs .chrome-tab .chrome-tab-dividers::after {
   pointer-events: none;
 }
+.wb-full  { display: none }
+
 
 .chrome-tabs .chrome-tab .chrome-tab-dividers::before,
 .chrome-tabs .chrome-tab .chrome-tab-dividers::after {
@@ -674,3 +845,6 @@ background-color: transparent;
 .dark .chrome-tabs .chrome-tabs-bottom-bar {
   background: #323639;
 }
+
+/*glow for webkit*/
+
