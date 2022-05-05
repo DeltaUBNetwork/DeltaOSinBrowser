@@ -32,6 +32,14 @@
   width: 100%;
   
 }
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+
+  }
 .timeandstuff{
   display: flex;
   flex-direction: column;
@@ -66,6 +74,24 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
+h3{
+    text-shadow: 0px 5px rgba(0, 0, 0, .50);
+text-align: center;
+color: rgb(0, 255, 0);
+}
+.pre {font-size: 15px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;    border-radius: 50px; 
+    border-top-left-radius: 2px 2px;
+      border-top-right-radius: 2px 90px;
+  text-align: center;
+     box-shadow: 0 1px 2px #1a1414, 
+    width: 798px; height: 625px; 
+                  0 2px 4px #1a1414, 
+                  0 4px 8px #1a1414,
+     0 8px 16px #1a1414;
+    opacity: 0.9;
+         background-color: #000000b6;
+     overflow: auto; 
 }
 .theiconsmain{
   align-items: center;
@@ -135,8 +161,15 @@ html {
   height: 100%;
 }
 body {
-  margin: 0;
-  overflow: hidden!important;
+   width:  auto;
+    height: auto;
+  
+ 
+
+  
+   height: 100%;
+width: 100%;
+  z-index: -1;
 }
 
 .dark {
@@ -202,6 +235,9 @@ body {
 }
 .wb-icon * {
     opacity: 0.65;
+}
+.card-header-title{
+  color: green;
 }
 
 .wb-icon *:hover {

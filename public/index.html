@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src='https://rawcdn.githack.com/nextapps-de/winbox/0.2.0/dist/winbox.bundle.js'></script>
     <script src="/js/draggabilly.js" type="module"></script>
     
@@ -18,7 +19,7 @@
   </head>
   
   <body class="dark-theme">
-      
+    
     <div class="mainstuff">
 
 
@@ -56,6 +57,17 @@
   
   </div>
 </div>
+      <div class="card-content has-text-centered" style='z-index: 69420'>
+      <div class='pre'data-aos="zoom-in-up"     data-aos-easing="ease-out-cubic"     data-aos-duration="1200" style="flex-direction: column;">
+        <header class="card-header" style="box-shadow: 0 0.125em 0.25em rgba(255, 255, 255, 15%)">
+          <p class="card-header-title">
+             ~ (master)
+          </p>
+          </header>
+        <h3 class='subtitle'id='typehere' style='margin-top: 35px; font-family: "Anonymous Pro"; font-size: 35px; font-style: italic;  font-weight: 200px; line-height: 49.5px; color: #29CB39;'></h3></div>
+
+        
+    </div>
    <script>
      function openWindow(title, url){
           new WinBox({
@@ -75,7 +87,28 @@ x: "center",
       <script src="uv/uv.bundle.js"></script>
     <script src="uv/uv.config.js"></script>
     <script type="text/javascript">
+  function ok(){
+          var typed = new Typed("#typehere", {
+    strings: [
+      /*"<pre class='command-line'>^50000",*/
+      `>>> School@Help:~$ cd math^700<br>>>> School@Help:~/math$ ./a.out^700<br>>>> DELTA NETWORK 2022<br>^500Initializing.^700.^700.^700.^700<br>^500Loaded!`
 
+    ],
+    typeSpeed: 25,
+    backDelay: 200,
+    backSpeed: 30,
+        showCursor: true,
+  cursorChar: '|',
+           
+ onComplete: (self) => {
+   document.querySelector('.card-content').style.display = 'none';
+ },
+  });
+      }
+        
+   setTimeout(3500,ok())
+
+   </script>
 
 	
   </body>
