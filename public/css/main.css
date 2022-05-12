@@ -85,13 +85,16 @@ color: rgb(0, 255, 0);
       border-top-right-radius: 2px 90px;
   text-align: center;
      box-shadow: 0 1px 2px #1a1414, 
-    width: 798px; height: 625px; 
+    width: 798px; height: calc(100vh);
                   0 2px 4px #1a1414, 
                   0 4px 8px #1a1414,
      0 8px 16px #1a1414;
-    opacity: 0.9;
+  opacity: 0.99999999;
+        position: relative;
+
          background-color: #000000b6;
      overflow: auto; 
+      z-index: 69420;
 }
 .theiconsmain{
   align-items: center;
@@ -126,9 +129,13 @@ color: rgb(0, 255, 0);
   height: 86px;
   justify-content: center;
   margin: 4px;
-  width: 76px;
+  width: 86px;
   display: flex;
   flex-direction: column;
+}
+.appe img{
+  height: 65%;
+  width: 65%;
 }
 .othershit{
   margin-left: 10px;
@@ -217,14 +224,14 @@ width: 100%;
   fill: var(--light-addressbar-btn-enabled);
   stroke: var(--light-addressbar-btn-enabled);
   border-radius: 50%;
-  height: 20px;
+ 
   padding: 6px;
   transition: 0.2s;
-  width: 20px;
+
 }
 .winbox{
   border-radius: 6px;
-  background: #e7eaec;
+  background: #464141;
 }
 
 
@@ -261,10 +268,9 @@ width: 100%;
 
 .wb-title{
   text-shadow: 0px 3px rgba(0,0,0,.30);
-  color: rgb(0,255,0);
+  color: rgb(247 247 247)
 }
 .wb-body{
-  margin: 4px;
   color: #bb7272;
   background: #ffffff;
 }
@@ -490,11 +496,11 @@ background-color: transparent;
 .chrome-tabs .new-tab-button-wrapper {
   display: inline-flex;
   align-items: center;
-  background: inherit;
+ 
   pointer-events: auto;
   user-select: none;
   height: 100%;
-  width: 80px;
+  
   position: relative;
   z-index: 5;
   border-radius: 17px;
@@ -503,7 +509,7 @@ background-color: transparent;
 }
 
 .chrome-tabs .new-tab-button-wrapper.overflow-shadow {
-  box-shadow: -5px 1px 5px #ccc, 20px 0 0 #dee1e6;
+  
   padding-left: 4px;
 }
 

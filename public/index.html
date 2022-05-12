@@ -10,6 +10,9 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" crossorigin="anonymous">
+           <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js'></script>
+      <script src='https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js'></script>
 <script src='https://rawcdn.githack.com/nextapps-de/winbox/0.2.0/dist/winbox.bundle.js'></script>
     <script src="/js/draggabilly.js" type="module"></script>
     
@@ -20,7 +23,7 @@
   
   <body class="dark-theme">
     
-    <div class="mainstuff">
+    <div class="mainstuff" id='testcanv'>
 
 
       <div class="mainmain">
@@ -28,11 +31,12 @@
         <div class="appe" onclick="openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html')">
           <img src='https://google.com/favicon.ico'>  <div style='color: rgb(0,255,0); text-align: center; margin-top: 4px;'>Chromium</div>
         </div>
-       <div class="appe">
-        <img src="https://google.com/favicon.ico">
-        <div style='color: rgb(0,255,0); text-align: center; margin-top: 4px;'>Chromium</div>
-      </div>
-      
+       <div class="appe" onclick="openWindow('Settings',location.protocol + '//' + location.hostname + '/settings.html')">
+          <img src='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fdownload_144812.png&f=1&nofb=1' style='filter: invert(1);'>  <div style='color: rgb(0,255,0); text-align: center; margin-top: 4px;'>Settings</div>
+        </div>
+       <div class="appe" onclick="openWindow('schoolHelp@main: ~',location.protocol + '//' + location.hostname + '/term.html')">
+          <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.iconfinder.com%2Fdata%2Ficons%2Fthe-circle-icons%2F512%2Fterminal.png&f=1&nofb=1' style='filter: invert(1);'>  <div style='color: rgb(0,255,0); text-align: center; margin-top: 4px;'>Terminal</div>
+        </div>
     </div>
       </div>
      
@@ -41,7 +45,7 @@
   <div class='pp'>
   <div class='theiconsmain'>
     <div class='alltheicons'>
-      <div class='iconhold' style='display: grid; place-items: center;'>
+      <div class='iconhold' style='display: grid; place-items: center;' onclick="openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html')">
         <img src='https://google.com/favicon.ico'>
       </div>
     </div>
@@ -58,13 +62,13 @@
   </div>
 </div>
       <div class="card-content has-text-centered" style='z-index: 69420'>
-      <div class='pre'data-aos="zoom-in-up"     data-aos-easing="ease-out-cubic"     data-aos-duration="1200" style="flex-direction: column;">
-        <header class="card-header" style="box-shadow: 0 0.125em 0.25em rgba(255, 255, 255, 15%)">
-          <p class="card-header-title">
+      <div class='pre'data-aos="zoom-in-up"     data-aos-easing="ease-out-cubic"     data-aos-duration="1200" style="flex-direction: column; " style='z-index: 69420;'>
+        <header class="card-header" style="box-shadow: 0 0.125em 0.25em rgba(255, 255, 255, 15%); z-index: 69420;">
+          <p class="card-header-title" style='z-index: 69420;'>
              ~ (master)
           </p>
           </header>
-        <h3 class='subtitle'id='typehere' style='margin-top: 35px; font-family: "Anonymous Pro"; font-size: 35px; font-style: italic;  font-weight: 200px; line-height: 49.5px; color: #29CB39;'></h3></div>
+        <h3 class='subtitle'id='typehere' style='margin-top: 35px; font-family: "Anonymous Pro"; font-size: 35px; font-style: italic;  font-weight: 200px; line-height: 49.5px; color: #29CB39; z-index: 69420'></h3></div>
 
         
     </div>
@@ -91,7 +95,7 @@ x: "center",
           var typed = new Typed("#typehere", {
     strings: [
       /*"<pre class='command-line'>^50000",*/
-      `>>> School@Help:~$ cd math^700<br>>>> School@Help:~/math$ ./a.out^700<br>>>> DELTA NETWORK 2022<br>^500Initializing.^700.^700.^700.^700<br>^500Loaded!`
+      `No signal^600`,`[INFO] Setting up.^500.^500.^500.^700<br>Booting from hard drive.^300.^300.^300<br>Boot succeeded. Reading from hard drive.^700<br>Starting Kernel^700<br>Succeeded. Initializing.^300.^300.^300<br>Done!^500`
 
     ],
     typeSpeed: 25,
@@ -109,7 +113,63 @@ x: "center",
    setTimeout(3500,ok())
 
    </script>
+    <script>
+      let inFrame
 
-	
+try {
+    inFrame = window !== top
+} catch (e) {
+    inFrame = true
+}
+
+if (!inFrame && localStorage.getItem('aboutBlank') == true) {
+  
+  function bypass(){
+    document.querySelector(".subtitle").click()
+     const popup = open("about:blank", "_blank")
+    if (!popup || popup.closed) {
+        alert("Error")
+    } else {
+        const doc = popup.document
+        const iframe = doc.createElement("iframe")
+        const style = iframe.style
+        const link = doc.createElement("link")
+
+        doc.title = "Classes"
+        link.rel = "icon";
+        link.href = "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
+        iframe.src = location.href
+        style.position = "fixed"
+        style.top = style.bottom = style.left = style.right = 0
+        style.border = style.outline = "none"
+        style.width = style.height = "100%"
+
+        doc.body.appendChild(iframe)
+        
+        location.replace("https://classroom.google.com")
+    }
+  }
+
+  setTimeout(bypass,300)
+    }
+  
+   
+    </script>
+<script>
+    VANTA.DOTS({
+  el: "#testcanv",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0x29355f,
+  size: 9.90,
+  spacing: 68.00
+})
+</script>
+
   </body>
 </html>

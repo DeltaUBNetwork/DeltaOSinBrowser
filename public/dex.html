@@ -76,12 +76,7 @@
       </div>
     
     
-      <div class='bookmarktab'style='align-self: self-start;'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-bookmark-star" viewBox="0 0 16 16">
-  <path d="M7.84 4.1a.178.178 0 0 1 .32 0l.634 1.285a.178.178 0 0 0 .134.098l1.42.206c.145.021.204.2.098.303L9.42 6.993a.178.178 0 0 0-.051.158l.242 1.414a.178.178 0 0 1-.258.187l-1.27-.668a.178.178 0 0 0-.165 0l-1.27.668a.178.178 0 0 1-.257-.187l.242-1.414a.178.178 0 0 0-.05-.158l-1.03-1.001a.178.178 0 0 1 .098-.303l1.42-.206a.178.178 0 0 0 .134-.098L7.84 4.1z"/>
-  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-</svg>
-      </div>
+  
       <script>
     
         const ta = document.querySelector('.bookmarktab');
@@ -116,7 +111,12 @@ if (bookmarksLocal == null ) {localStorage.setItem("allbookmarks", "[ ]"); bookm
         ta.addEventListener('click',eqe); 
         window.eqe = eqe;
       </script>
-    
+    <div class='bookmarktab'style='align-self: self-start;'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-bookmark-star" viewBox="0 0 16 16">
+  <path d="M7.84 4.1a.178.178 0 0 1 .32 0l.634 1.285a.178.178 0 0 0 .134.098l1.42.206c.145.021.204.2.098.303L9.42 6.993a.178.178 0 0 0-.051.158l.242 1.414a.178.178 0 0 1-.258.187l-1.27-.668a.178.178 0 0 0-.165 0l-1.27.668a.178.178 0 0 1-.257-.187l.242-1.414a.178.178 0 0 0-.05-.158l-1.03-1.001a.178.178 0 0 1 .098-.303l1.42-.206a.178.178 0 0 0 .134-.098L7.84 4.1z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+</svg>
+      </div>
       <div style="height: 5px; width: 5px;"></div>
       <div id="userprofile"style='align-self: self-start;'>
         <img src='ayit.svg'width="40" height="40">
@@ -208,13 +208,17 @@ ok();    '>Print (CTRL-P)</li>
     <div class='bookmarks' style='
 width: 100%;  border-bottom: 1px solid #d4d4d4; 
 '>
-        <div class='eq' style='display: flex;'>
+        <div class='eq' style='display: flex; margin-bottom: 5px; margin-top: 3px; overflow: auto;'>
           <div class='examplebookmark' id='fix' onclick="openBookmark('https://duckduckgo.com',false)">
             <div class='theicon'>
               <img src='https://duckduckgo.com/favicon.ico' class='realicon'>
               </div>
              <div style="height: 1px; width: 5px;"></div>
-            <div class='bookmarktitle' style='font-size: 1rem; '>
+            <div class='bookmarktitle' style='    
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;'>
               DuckDuckGo
             </div>
           </div>
@@ -336,10 +340,10 @@ if (localstuf == null ) {localStorage.setItem("allbookmarks", "[ ]"); localstuf 
       document.addEventListener('keydown', logKey)
       waitForElm('.browser-tab-content-iframe[active]').then((elm) => {
        function eqrre(){
-          alert(document.querySelector('.browser-tab-content-iframe[active]').contentDocument)
+       
 document.querySelector('.browser-tab-content-iframe[active]').contentDocument.addEventListener('keydown',logKey)
         }
-        setTimeout(7000,eqrre);
+        setTimeout(eqrre,700);
       })
 function logKey(event) {
   console.warn(event)
