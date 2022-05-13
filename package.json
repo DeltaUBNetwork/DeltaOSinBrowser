@@ -28,7 +28,7 @@
     "warcio": "^1.5.1",
     "ws": "^8.5.0"
   },
-  "name": "math",
+ 
   "version": "1.0.0",
   "description": "math",
   "main": "index.js",
