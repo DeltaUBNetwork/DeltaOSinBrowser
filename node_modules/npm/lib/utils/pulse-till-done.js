@@ -1,4 +1,4 @@
-const log = require('./log-shim.js')
+const log = require('npmlog')
 
 let pulseTimer = null
 const withPromise = async (promise) => {
