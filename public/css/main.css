@@ -32,6 +32,7 @@
   width: 100%;
   
 }
+
 * {
     margin: 0;
     padding: 0; 
@@ -46,6 +47,7 @@
   font-size: 25px;
   justify-content: center;
   padding: 0 8px;
+
 }
 .wb-body::-webkit-scrollbar {
     width: 12px;
@@ -104,12 +106,31 @@ color: rgb(0, 255, 0);
   width: 100%;
 }
 .iconhold{
-  height: 38px;
   box-sizing: border-box;
   margin: auto 3px;
   position: relative;
-  width: 38px;
+  width: 100%;
+  height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
   
+}
+.iconhold:hover {
+  background: #524747;
+}
+.iconhold img {
+  padding-bottom: 5px;
+  height: 35px;
+    width: auto;
+ /* border-bottom: 2px solid white;*/
+}
+.iconhold svg {
+  
+  padding-bottom: 5px;
+  height: 35px;
+    width: auto;
+ /* border-bottom: 2px solid white;*/
+
 }
 .alltheicons{
   align-items: center;
@@ -124,6 +145,7 @@ color: rgb(0, 255, 0);
   width: 0;
 }
 .appe{
+  cursor: pointer;
   align-items: center;
   font-size: .8em;
   height: 86px;
@@ -132,12 +154,21 @@ color: rgb(0, 255, 0);
   width: 86px;
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
+}
+::-webkit-scrollbar{width:8px; cursor: pointer, auto;}::-webkit-scrollbar-track{background-color: transparent; }::-webkit-scrollbar-thumb{background:#3a3964;}
+.appe:hover{
+backdrop-filter: brightness(0.8);
+
 }
 .appe img{
   height: 65%;
   width: 65%;
 }
 .othershit{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: #302b2b;
   margin-left: 10px;
   right: 0;
   top: 0;
@@ -160,7 +191,7 @@ color: rgb(0, 255, 0);
   font-weight: 400;
   text-align: center;
   width: 100%;
-  color: #29CB39;
+  color: white;
 }
 #root,
 body,
@@ -331,7 +362,7 @@ div[Attributes Style] {
 			}
 
 			.context-menu ul li:hover{
-				background: #eee;
+				/*background: #eee;*/
 				border-left: 4px solid #666;
 			}
 

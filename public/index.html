@@ -28,60 +28,95 @@
 
       <div class="mainmain">
            
-        <div class="appe" onclick="openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html')">
-          <img src='https://google.com/favicon.ico'>  <div style='color: rgb(0,255,0); text-align: center; margin-top: 4px;'>Chromium</div>
+        <div class="appe" onclick="openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html','https://google.com/favicon.ico')">
+          <img src='https://google.com/favicon.ico'>  <div style='color: white; text-align: center; margin-top: 4px;'>Chromium</div>
         </div>
-       <div class="appe" onclick="openWindow('Settings',location.protocol + '//' + location.hostname + '/settings.html')">
-          <img src='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fdownload_144812.png&f=1&nofb=1' style='filter: invert(1);'>  <div style='color: rgb(0,255,0); text-align: center; margin-top: 4px;'>Settings</div>
+       <div class="appe" onclick="openWindow('Settings',location.protocol + '//' + location.hostname + '/settings.html','https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fdownload_144812.png&f=1&nofb=1')">
+          <img src='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fdownload_144812.png&f=1&nofb=1' style='filter: invert(1);'>  <div style='color: white; text-align: center; margin-top: 4px;'>Settings</div>
         </div>
-       <div class="appe" onclick="openWindow('schoolHelp@main: ~',location.protocol + '//' + location.hostname + '/term.html')">
-          <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.iconfinder.com%2Fdata%2Ficons%2Fthe-circle-icons%2F512%2Fterminal.png&f=1&nofb=1' style='filter: invert(1);'>  <div style='color: rgb(0,255,0); text-align: center; margin-top: 4px;'>Terminal</div>
+       <div class="appe" onclick="openWindow('Terminal',location.protocol + '//' + location.hostname + '/term.html','https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.iconfinder.com%2Fdata%2Ficons%2Fthe-circle-icons%2F512%2Fterminal.png&f=1&nofb=1')">
+          <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.iconfinder.com%2Fdata%2Ficons%2Fthe-circle-icons%2F512%2Fterminal.png&f=1&nofb=1' style='filter: invert(1);'>  <div style='color: white; text-align: center; margin-top: 4px;'>Terminal</div>
+        </div>
+         <div class="appe" onclick="openWindow('Games',location.protocol + '//' + location.hostname + '/games.html','https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fe%2Fe0%2FWPVG_icon_2016.svg%2F480px-WPVG_icon_2016.svg.png&f=1&nofb=1')">
+          <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fe%2Fe0%2FWPVG_icon_2016.svg%2F480px-WPVG_icon_2016.svg.png&f=1&nofb=1' style='filter: invert(1);'>  <div style='color: white; text-align: center; margin-top: 4px;'>Games</div>
         </div>
     </div>
       </div>
      
     </div>
-<div class='taskbar' style='border-radius: 10px;'>
+<div class='taskbar'>
   <div class='pp'>
   <div class='theiconsmain'>
     <div class='alltheicons'>
-      <div class='iconhold' style='display: grid; place-items: center;' onclick="openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html')">
-        <img src='https://google.com/favicon.ico'>
+         <div class='iconhold' style='display: flex;
+    position: absolute;
+           
+    width: auto;
+    left: 0px;
+    place-items: center;' onclick="">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fcircle-vector-png-1.png&f=1&nofb=1"style='filter: invert(1);'>
       </div>
+      <div class='iconhold ay' id='Chromiumthe' style='display: grid; place-items: center;' onclick="openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html','https://google.com/favicon.ico')">
+        <img src='https://google.com/favicon.ico' onclick="openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html','https://google.com/favicon.ico')">
+      </div>
+     
     </div>
   </div>
   <div class='othershit'>
-    <div class='timeandstuff'>
+    <div class='timeandstuff' style='font-size: 15px !important;'>
      
-        <div>6:09 PM</div>
-      
+        <div id='thetime'>00:00 N/A</div>
+              <div id='thedata'>00:00 N/A</div>
+
   
     </div>
   </div>
   
   </div>
 </div>
-      <div class="card-content has-text-centered" style='z-index: 69420'>
-      <div class='pre'data-aos="zoom-in-up"     data-aos-easing="ease-out-cubic"     data-aos-duration="1200" style="flex-direction: column; " style='z-index: 69420;'>
-        <header class="card-header" style="box-shadow: 0 0.125em 0.25em rgba(255, 255, 255, 15%); z-index: 69420;">
-          <p class="card-header-title" style='z-index: 69420;'>
-             ~ (master)
-          </p>
-          </header>
-        <h3 class='subtitle'id='typehere' style='margin-top: 35px; font-family: "Anonymous Pro"; font-size: 35px; font-style: italic;  font-weight: 200px; line-height: 49.5px; color: #29CB39; z-index: 69420'></h3></div>
-
-        
-    </div>
+     
    <script>
-     function openWindow(title, url){
+     function openWindow(title, url,img){
+       
           new WinBox({
        url: url,
        title: title,
+            id: title,
        width: "75%",
        height: "75%",
 x: "center",
-       y: "center"
-      
+       y: "center",
+      x: "center",
+            onclose: function() {     
+              if (this.id.substring(0,8) != 'Chromium'){
+             if (document.querySelectorAll(`#${title}`)[1] == null){ document.getElementById(this.id+"the").remove(); 
+                }
+              } else {
+        if (document.querySelectorAll(`#${title}`)[1] == null){          document.getElementById(this.id+"the").style.borderBottom = ''
+                                                              }
+              }
+              
+            },
+            onfocus: function() {
+              
+              if (this.id.substring(0,8) != 'Chromium' && document.getElementById(title) == null){
+                let tempe = document.querySelector('.ay')     
+                
+                  let temp = tempe.cloneNode(true);
+                temp.setAttribute('id',title + "the")
+               temp.onclick='';
+                
+              let thet = temp.childNodes[1] 
+            
+                thet.setAttribute("src",img);
+                  let ad = document.querySelector('.alltheicons')
+        ad.appendChild(temp)
+                      document.getElementById(this.id+"the").style.borderBottom = '2px solid #6995e7'  
+        } else {
+               
+      document.getElementById(this.id+"the").style.borderBottom = '2px solid #6995e7'  
+      }
+            }
      })
      }
  
@@ -90,30 +125,32 @@ x: "center",
     <script src='index.js'></script>
       <script src="uv/uv.bundle.js"></script>
     <script src="uv/uv.config.js"></script>
-    <script type="text/javascript">
-  function ok(){
-          var typed = new Typed("#typehere", {
-    strings: [
-      /*"<pre class='command-line'>^50000",*/
-      `No signal^600`,`[INFO] Setting up.^500.^500.^500.^700<br>Booting from hard drive.^300.^300.^300<br>Boot succeeded. Reading from hard drive.^700<br>Starting Kernel^700<br>Succeeded. Initializing.^300.^300.^300<br>Done!^500`
 
-    ],
-    typeSpeed: 25,
-    backDelay: 200,
-    backSpeed: 30,
-        showCursor: true,
-  cursorChar: '|',
-           
- onComplete: (self) => {
-   document.querySelector('.card-content').style.display = 'none';
- },
-  });
-      }
-        
-   setTimeout(3500,ok())
-
-   </script>
     <script>
+      function update(){
+      let thedate = new Date();
+  
+      let hour = thedate.getHours();
+      let min = thedate.getMinutes();
+         let year = thedate.getFullYear();
+     let month = thedate.getMonth() + 1;
+      let day = thedate.getDate();
+      document.getElementById('thedata').textContent = `${month}/${day}/${year}`
+      let a = 'AM';
+      if (hour == 0) {
+        hour = 12;
+      }
+      if (hour > 12){
+        hour = hour - 12
+        a = 'PM'
+      }
+      if (min < 10) min = "0" + min;
+        document.getElementById('thetime').textContent = `${hour}:${min} ${a}`
+      }
+     
+      
+      update();
+      setInterval(update,1000)
       let inFrame
 
 try {
@@ -122,11 +159,11 @@ try {
     inFrame = true
 }
 
-if (!inFrame && localStorage.getItem('aboutBlank') == true) {
+if (!inFrame == true && localStorage.getItem('aboutBlank') == "on") {
   
   function bypass(){
-    document.querySelector(".subtitle").click()
-     const popup = open("about:blank", "_blank")
+    document.querySelector(".timeandstuff").click() // Used to bypass Chrome's restrictions 
+     const popup = open("about:blank", "_blank") // Opening the window
     if (!popup || popup.closed) {
         alert("Error")
     } else {
@@ -139,7 +176,7 @@ if (!inFrame && localStorage.getItem('aboutBlank') == true) {
         link.rel = "icon";
         link.href = "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
         iframe.src = location.href
-        style.position = "fixed"
+        style.position = "fixed" // ignore this lol old about blank code
         style.top = style.bottom = style.left = style.right = 0
         style.border = style.outline = "none"
         style.width = style.height = "100%"
@@ -160,7 +197,7 @@ if (!inFrame && localStorage.getItem('aboutBlank') == true) {
   el: "#testcanv",
   mouseControls: true,
   touchControls: true,
-  gyroControls: false,
+  gyroControls: true,
   minHeight: 200.00,
   minWidth: 200.00,
   scale: 1.00,

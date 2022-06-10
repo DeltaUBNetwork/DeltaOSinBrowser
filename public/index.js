@@ -4,7 +4,7 @@ document.getElementById('proi').addEventListener('keydown', function(e) {
     if (e.keyCode == 13){
       e.preventDefault();
             var input = document.getElementById('proi').innerText
-             alert(input);
+         
      if (input.indexOf('genow://') > -1) {
        alert("Genow intenral url")
    

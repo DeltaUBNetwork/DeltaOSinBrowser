@@ -13,9 +13,11 @@
     
     <script src="/js/index.js" type="module"></script>
     <link href="/css/main.css" rel="stylesheet">
- 
+  <script>document.documentElement.classList.add("dark");
+    
+  </script>
   </head>
-  
+ 
   <body class="dark-theme">
 
     <!-- Tab bar -->
@@ -39,7 +41,7 @@
 			</div>
    
     <!-- Url bar -->
-    <div class="browser-bar">
+    <div class="browser-bar" style='height: auto;'>
       
       <div id="pageBack" style='align-self: self-start;'>
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill-rule="evenodd" class="browser-bar-btn browser-bar-btn-disabled" viewBox="0 0 32 32">
@@ -67,19 +69,27 @@
       </div>
       <div style="height: 1px; width: 8px;"></div>
       
-      <div class="addressbar" style='outline: none; background-color: rgb(241, 243, 244);align-self: self-start;'>
+      <div class="addressbar" style='outline: none; background-color: rgb(241, 243, 244);align-self: self-start;border: 2.5px solid #2767a9 !important;'>
         <div style="height: 1px; width: 5px;"></div>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill-rule="evenodd" class="browser-bar-btn addressbar-btn" viewBox="0 0 20 20">
           <path stroke-width="0px" stroke-linecap="round" shape-rendering="geometricPrecision" d="M 9 14 h 2 v -4 H 9 v 4 Z m 1 -12 c -4.42 0 -8 3.58 -8 8 c 0 4.42 3.58 8 8 8 c 4.42 0 8 -3.58 8 -8 c 0 -4.42 -3.58 -8 -8 -8 Z m 0 14 c -3.31 0 -6 -2.69 -6 -6 c 0 -3.31 2.69 -6 6 -6 c 3.31 0 6 2.69 6 6 c 0 3.31 -2.69 6 -6 6 Z M 9 8 h 2 V 6 H 9 v 2 Z"></path>
         </svg>
-        <div class="addressbar-urlbar" contenteditable="true" spellcheck="false" id='proi'></div>
+        <div class="addressbar-urlbar" style='color: black' contenteditable="true" spellcheck="false" id='proi'></div>
       </div>
     
     
   
-      <script>
     
-        const ta = document.querySelector('.bookmarktab');
+    <div class='bookmarktab'style='align-self: self-start;'>
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-bookmark-star" viewBox="0 0 16 16">
+  <path d="M7.84 4.1a.178.178 0 0 1 .32 0l.634 1.285a.178.178 0 0 0 .134.098l1.42.206c.145.021.204.2.098.303L9.42 6.993a.178.178 0 0 0-.051.158l.242 1.414a.178.178 0 0 1-.258.187l-1.27-.668a.178.178 0 0 0-.165 0l-1.27.668a.178.178 0 0 1-.257-.187l.242-1.414a.178.178 0 0 0-.05-.158l-1.03-1.001a.178.178 0 0 1 .098-.303l1.42-.206a.178.178 0 0 0 .134-.098L7.84 4.1z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+</svg>
+      </div>
+      <script>
+
+      const ta = document.querySelector('.bookmarktab');
       function eqe(){
        
              const ife = document.querySelector('iframe[active]')
@@ -111,12 +121,6 @@ if (bookmarksLocal == null ) {localStorage.setItem("allbookmarks", "[ ]"); bookm
         ta.addEventListener('click',eqe); 
         window.eqe = eqe;
       </script>
-    <div class='bookmarktab'style='align-self: self-start;'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-bookmark-star" viewBox="0 0 16 16">
-  <path d="M7.84 4.1a.178.178 0 0 1 .32 0l.634 1.285a.178.178 0 0 0 .134.098l1.42.206c.145.021.204.2.098.303L9.42 6.993a.178.178 0 0 0-.051.158l.242 1.414a.178.178 0 0 1-.258.187l-1.27-.668a.178.178 0 0 0-.165 0l-1.27.668a.178.178 0 0 1-.257-.187l.242-1.414a.178.178 0 0 0-.05-.158l-1.03-1.001a.178.178 0 0 1 .098-.303l1.42-.206a.178.178 0 0 0 .134-.098L7.84 4.1z"/>
-  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-</svg>
-      </div>
       <div style="height: 5px; width: 5px;"></div>
       <div id="userprofile"style='align-self: self-start;'>
         <img src='ayit.svg'width="40" height="40">
@@ -143,7 +147,8 @@ if (bookmarksLocal == null ) {localStorage.setItem("allbookmarks", "[ ]"); bookm
    </svg> 
 
      
-      <div id="settingsMenu" class="context-menu" style='display: none;
+      <div id="settingsMenu" class="context-menu" style='display: none;    background-color: #181515;
+    color: white;
     position: absolute;right:0;'>
 				<ul>
 					<li onclick='const iframe = document.querySelector(`.browser-tab-content-iframe[active]`); iframe.src="./hostedPages/history.html"; document.getElementById("proi").innerText = "genow://history"'>History</li>
@@ -206,7 +211,7 @@ ok();    '>Print (CTRL-P)</li>
       }
     </script>
     <div class='bookmarks' style='
-width: 100%;  border-bottom: 1px solid #d4d4d4; 
+width: 100%; border-bottom:1px groove #494f54;
 '>
         <div class='eq' style='display: flex; margin-bottom: 5px; margin-top: 3px; overflow: auto;'>
           <div class='examplebookmark' id='fix' onclick="openBookmark('https://duckduckgo.com',false)">
@@ -216,6 +221,7 @@ width: 100%;  border-bottom: 1px solid #d4d4d4;
              <div style="height: 1px; width: 5px;"></div>
             <div class='bookmarktitle' style='    
     font-size: 1rem;
+              color: white;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;'>
@@ -346,10 +352,11 @@ document.querySelector('.browser-tab-content-iframe[active]').contentDocument.ad
         setTimeout(eqrre,700);
       })
 function logKey(event) {
-  console.warn(event)
+  //console.warn(event)
+  // What was I thinking 
                 if ((event.ctrlKey && event.keyCode == 68)) {
                 event.preventDefault();
-                alert("Triggered bookmark")
+              
                 eqe();      
       
             }

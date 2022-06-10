@@ -26,7 +26,6 @@
   height: 34px;
 }
 
-
 .switch input {
   opacity: 0;
   width: 0;
@@ -147,7 +146,10 @@ outline: none;
   </style>
       <div class="terminal">
   <div id="history">
-    
+    Welcome to the Terminal.<br>
+    Type 'help' to see a list of commands.<br>
+     _ _ _ _ _ _ _ _ _ _  <br><br>
+
   </div>
   <div class="line">
     <span id="path">schoolMath@help:~$&ensp;</span>
@@ -485,11 +487,26 @@ x    border: 0;
                break;  
            case 'ls':
               $('#history').append($(this).val() + '<br/>'); // Bash soon
-               $('#history').append(">>> Chromium<br/>>>> Games<br/>>>> Settings<br/>Current Directory: " + window.directory + "<br/>"); // Bash soon
+             if (window.directory == 'Chromium'){
+                $('#history').append("Chromium.exe<br/>Current Directory: " + window.directory + "<br/>"); // Bash soon
+             } else if (window.directory == '/'){
+                $('#history').append(">>> Chromium<br/>>>> Games<br/>>>> Settings<br/>Current Directory: " + window.directory + "<br/>"); // Bash soon
+             } else if (window.directory == 'Games'){
+               $('#history').append("2048.exe<br/>MotoX3m.exe<br/>Current Directory: " + window.directory + "<br/>"); 
+             } else if (window.directory == 'Settings'){
+               $('#history').append("Settings.exe<br/>Current Directory: " + window.directory + "<br/>"); 
+             } else {
+               $('#history').append("Error.exe 404<br/>Current Directory: " + window.directory + "<br/>"); 
+             }
+           //    $('#history').append(">>> Chromium<br/>>>> Games<br/>>>> Settings<br/>Current Directory: " + window.directory + "<br/>"); // Bash soon
                break;
            case 'rm ':
              $('#history').append($(this).val() + '<br/>'); // Bash soon
              $('#history').append("Recursively deleted all files!" + '<br/>'); // Bash soon
+             break;
+             case 'hel':
+             $('#history').append($(this).val() + '<br/>'); // Bash soon
+             $('#history').append("Commands: help (this command), ls, echo, cd, start with directory selected, more soon" + '<br/>'); // Bash soon
              break;
            default:
              $('#history').append($(this).val() + '<br/>'); // Bash soon

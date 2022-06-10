@@ -336,10 +336,24 @@ input:checked + .slider:before {
             </button>
         </form>
       <br>
+
+      <script>
+        function togglecloak() {
+          if (localStorage.getItem('aboutBlank') == "on"){
+            localStorage.setItem('aboutBlank', "off")
+            alert("off")
+          } else {
+            localStorage.setItem('aboutBlank', "on")
+            alert("on")
+          }
+        }
+      </script>
+
+      
       <h2 style='color: #f5f2f2;'>About:Blank Cloak - This hides your screen from GoGuardian when using this.    
     <label class="switch" style=' background-color: #f44336; margin-left: 10px;'>
   <input type="checkbox">
-  <span class="slider"></span>
+  <span class="slider" onclick="togglecloak()"></span>
   </label>
       </h1>
             
