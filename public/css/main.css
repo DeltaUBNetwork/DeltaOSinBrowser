@@ -22,15 +22,13 @@
   vertical-align: baseline;
 }
 .taskbar{
- backdrop-filter: saturate(3) blur(15px);
- background:  #292020;
-  
-  bottom: 0;
-  color: rgb(0,0,0);
-  height: 48px;
-  position: absolute;
-  width: 100%;
-  
+ backdrop-filter: blur(3px);
+    background: rgb(41,32,32,.5);
+    bottom: 0;
+    color: #000;
+    height: 48px;
+    position: absolute;
+    width: 100%;
 }
 
 * {
@@ -71,7 +69,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  background:  url('ewq.png') #000000b6;
+ 
  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -166,18 +164,18 @@ backdrop-filter: brightness(0.8);
   width: 65%;
 }
 .othershit{
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  background: #302b2b;
-  margin-left: 10px;
-  right: 0;
-  top: 0;
-  position: absolute;
-  width:auto;
-  align-items: center;
-  display: flex;
-  height: 100%;
- 
+ border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: rgb(41,32,32,0.4);
+    margin-left: 10px;
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: auto;
+    align-items: center;
+    display: flex;
+    height: 100%;
+
   
 }
 .pp{
@@ -342,12 +340,12 @@ div[Attributes Style] {
     -webkit-line-break: after-white-space;
 }
 .context-menu{
-				width: 200px;
-				height: auto;
-				box-shadow: 0 0 20px 0 #ccc;
-				position: absolute;
-				display: none;
-  background: white;
+		width: 200px;
+    height: auto;
+    box-shadow: 0 0 20px 0 #2c1c1c;
+    position: absolute;
+    display: none;
+    background: #302a2a;
 			}
 
 			.context-menu ul{
@@ -356,9 +354,10 @@ div[Attributes Style] {
 			}
 
 			.context-menu ul li:not(.separator){
-				padding: 10px 5px 10px 5px;
-				border-left: 4px solid transparent;
-				cursor: pointer;
+			padding: 10px 5px;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+    color: white;
 			}
 
 			.context-menu ul li:hover{

@@ -226,9 +226,11 @@ class ChromeTabs {
 
 			window.onclick = hideContextMenu;
 		var contextMenu1 = document.getElementById('contextMenu');
+   
      contextMenu1.getElementsByTagName('ul')[0].getElementsByClassName('closeta')[0].addEventListener('click',function(){
           _browser_.chromeTabs.removeTab(tabEl)
     })
+
      contextMenu1.getElementsByTagName('ul')[0].getElementsByClassName('reloadta')[0].addEventListener('click',function(){
       const iframe = document.querySelector(".browser-tab-content-iframe[active]");
     if(iframe.getAttribute("loading") === "true") {
@@ -240,10 +242,12 @@ class ChromeTabs {
       iframe.setAttribute("sandbox", "allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts");
     }
      })
-          contextMenu1.getElementsByTagName('ul')[0].getElementsByClassName('dupeta')[0].addEventListener('click',function(){
+       /*   contextMenu1.getElementsByTagName('ul')[0].getElementsByClassName('dupeta')[0].addEventListener('click',function(){
          var pog = tabEl.getAttribute('tabid');
+              const iframe = document.querySelector(`.browser-tab-content-iframe[tabid='${pog}']`);
           
-           const iframe = document.querySelector(`.browser-tab-content-iframe[tabid='${pog}']`);
+       
+         
   var yayy = _browser_.chromeTabs.addTab({
     title: "Loading...",
     favicon: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F2%2F25%2FGoogle_Classroom_icon.svg%2F1200px-Google_Classroom_icon.svg.png&f=1&nofb=1", 
@@ -255,7 +259,7 @@ class ChromeTabs {
                       
 
     
-    })
+    })*/
 	
 			function showContextMenu (event) {
        
@@ -314,7 +318,8 @@ class ChromeTabs {
      if(document.querySelectorAll('.chrome-tab').length == 1){
   
  
-    alert("Cant close last tab");
+     
+     
      return;
   } else {
     if (tabEl === this.activeTabEl) {

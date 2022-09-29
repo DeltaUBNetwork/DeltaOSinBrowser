@@ -5,6 +5,32 @@
   <head>
     
     <title>Priority - Google Drive</title>
+    <style>
+          .divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+     
+}
+
+.divider::after,
+.divider::before {
+  content: "";
+  border: 1px solid red;
+
+   background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  flex: 1;
+}
+
+
+.divider:not(:empty)::before {
+  margin-right: 0.5em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: 0.5em;
+}
+    </style>
     <meta name="description" content="A tool used to help students learn! This is a less laggy version of the original Google Drive.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -26,24 +52,86 @@
     <div class="mainstuff" id='testcanv'>
 
 
-      <div class="mainmain">
+      <div class="mainmain" style='flex-wrap: wrap; display: flex; flex-direction: column; width: 0;'>
            
-        <div class="appe" onclick="openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html','https://google.com/favicon.ico')">
+        <div class="appe" id='thepog' onclick="openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html','https://google.com/favicon.ico')">
           <img src='https://google.com/favicon.ico'>  <div style='color: white; text-align: center; margin-top: 4px;'>Chromium</div>
         </div>
-       <div class="appe" onclick="openWindow('Settings',location.protocol + '//' + location.hostname + '/settings.html','https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fdownload_144812.png&f=1&nofb=1')">
-          <img src='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fdownload_144812.png&f=1&nofb=1' style='filter: invert(1);'>  <div style='color: white; text-align: center; margin-top: 4px;'>Settings</div>
-        </div>
-       <div class="appe" onclick="openWindow('Terminal',location.protocol + '//' + location.hostname + '/term.html','https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.iconfinder.com%2Fdata%2Ficons%2Fthe-circle-icons%2F512%2Fterminal.png&f=1&nofb=1')">
-          <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.iconfinder.com%2Fdata%2Ficons%2Fthe-circle-icons%2F512%2Fterminal.png&f=1&nofb=1' style='filter: invert(1);'>  <div style='color: white; text-align: center; margin-top: 4px;'>Terminal</div>
-        </div>
-         <div class="appe" onclick="openWindow('Games',location.protocol + '//' + location.hostname + '/games.html','https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fe%2Fe0%2FWPVG_icon_2016.svg%2F480px-WPVG_icon_2016.svg.png&f=1&nofb=1')">
-          <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fe%2Fe0%2FWPVG_icon_2016.svg%2F480px-WPVG_icon_2016.svg.png&f=1&nofb=1' style='filter: invert(1);'>  <div style='color: white; text-align: center; margin-top: 4px;'>Games</div>
+      
         </div>
     </div>
       </div>
      
     </div>
+    <div class="bruh" style="visibility: hidden; opacity: 0; color: #fff;z-index:  69420000;position: absolute;background: #403434;border-radius: 5px;width: 30%;height: 50%;bottom: 50px;margin-left: 5px; padding: 15px;">
+      <div class='divider'>
+        DELTA OS STABLE v.1.1
+      </div>
+      <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgame-icons.net%2Ficons%2F000000%2Ftransparent%2F1x1%2Flord-berandas%2Fpower-button.png&f=1&nofb=1' style='        width: 25px;
+    height: 25px;
+    filter: invert(1);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 10px;
+    margin-bottom: 5px;' onclick='location.href="https://classroom.google.com/"'>
+
+      <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fdownload_144812.png&amp;f=1&amp;nofb=1" style="        width: 25px;
+    height: 25px;
+    filter: invert(1);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 50px;
+    margin-bottom: 5px;">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fc%2Fcb%2FAntu_document-encrypted.svg%2F120px-Antu_document-encrypted.svg.png&amp;f=1&amp;nofb=1" style="        width: 25px;
+    height: 25px;
+    filter: brightness(10);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 90px;
+    margin-bottom: 5px;">
+</div>
+    <script>
+              
+      function toggleBruh(){
+        let eiow = document.querySelector('.bruh')
+        if (eiow.style.opacity == 0){
+          console.log("n ")
+          eiow.style.visibility = 'visible'
+         // eiow.style.visibility = 'hidden'
+          for (let i=0; i<11; i++){
+let e = i*50
+  setTimeout(function(){
+    if (i/10 == 1.1){
+      
+    } else {
+            eiow.style.opacity = i / 10
+    }
+          },e)
+          }
+        } else {
+          for (let p=10; p>0; p--){
+            if (p== 1){
+              console.log("at 1..")
+              eiow.style.opacity = 0;
+                        eiow.style.visibility = 'hidden'
+
+            } else {
+           let pq = p*50
+              let the = console.log(p / 10)
+  setTimeout(function(){
+            eiow.style.opacity = the
+          },pq)
+            }
+          }
+          
+            //        eiow.style.visibility = 'visible'
+
+        }
+      }
+    </script>
 <div class='taskbar'>
   <div class='pp'>
   <div class='theiconsmain'>
@@ -53,7 +141,7 @@
            
     width: auto;
     left: 0px;
-    place-items: center;' onclick="">
+    place-items: center;' onclick="toggleBruh()">
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fcircle-vector-png-1.png&f=1&nofb=1"style='filter: invert(1);'>
       </div>
       <div class='iconhold ay' id='Chromiumthe' style='display: grid; place-items: center;' onclick="openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html','https://google.com/favicon.ico')">
@@ -104,10 +192,11 @@ x: "center",
                 
                   let temp = tempe.cloneNode(true);
                 temp.setAttribute('id',title + "the")
-               temp.onclick='';
+               temp.setAttribute('onclick',`openWindow('${title}', url, '${icon}')`)
+                // openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html','https://google.com/favicon.ico')
                 
               let thet = temp.childNodes[1] 
-            
+              thet.setAttribute("onclick",`openWindow('${title}', url, '${icon}')`)
                 thet.setAttribute("src",img);
                   let ad = document.querySelector('.alltheicons')
         ad.appendChild(temp)
@@ -123,6 +212,8 @@ x: "center",
    </script>
 
     <script src='index.js'></script>
+        <script src='/appHandler.js'></script>
+
       <script src="uv/uv.bundle.js"></script>
     <script src="uv/uv.config.js"></script>
 
@@ -194,7 +285,7 @@ if (!inFrame == true && localStorage.getItem('aboutBlank') == "on") {
     </script>
 <script>
     VANTA.DOTS({
-  el: "#testcanv",
+  el: "body",
   mouseControls: true,
   touchControls: true,
   gyroControls: true,

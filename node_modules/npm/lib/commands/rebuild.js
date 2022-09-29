@@ -16,7 +16,7 @@ class Rebuild extends ArboristWorkspaceCmd {
     ...super.params,
   ]
 
-  static usage = ['[[<@scope>/]<name>[@<version>] ...]']
+  static usage = ['[<package-spec>] ...]']
 
   // TODO
   /* istanbul ignore next */
@@ -26,7 +26,7 @@ class Rebuild extends ArboristWorkspaceCmd {
 
   async exec (args) {
     const globalTop = resolve(this.npm.globalDir, '..')
-    const where = this.npm.config.get('global') ? globalTop : this.npm.prefix
+    const where = this.npm.global ? globalTop : this.npm.prefix
     const arb = new Arborist({
       ...this.npm.flatOptions,
       path: where,

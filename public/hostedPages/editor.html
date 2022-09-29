@@ -5,36 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Editor</title>
-    <div id='Content' contenteditable>
+      <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+
     <link rel="stylesheet" href="style.css">
+    <style>
+      html, body, #container {
+	
+
+	height: 100%;
+	margin-left: 5px;
+        margin-right: 5px;
+	padding: 3px;
+	overflow: hidden;
+}
+    </style>
   </head>
   <body>
     <h1>Editor</h1>
-    <script src='https://requirejs.org/docs/release/2.3.6/minified/require.js'>
-    </script>
-    var require = {
-        paths: {
-            'vs': '/node_modules/monaco-editor/min/vs',
-        }
-    };
-    </script>
-    <script src="node_modules/monaco-editor/min/vs/loader.js"></script>
+    <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+
+ <div id="container"></div>
 <script>
-    require(['vs/editor/editor.main'], () => {
-        // Initialize the editor
-        const editor = monaco.editor.create(document.getElementById("Content"), {
-            theme: 'vs-dark',
-            model: monaco.editor.createModel("# Sample markdown", "markdown"),
-            wordWrap: 'on',
-            automaticLayout: true,
-            minimap: {
-                enabled: false
-            },
-            scrollbar: {
-                vertical: 'auto'
-            }
-        });
-    });
+  require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@latest/min/vs' }});
+window.MonacoEnvironment = { getWorkerUrl: () => proxy };
+
+let proxy = URL.createObjectURL(new Blob([`
+	self.MonacoEnvironment = {
+		baseUrl: 'https://unpkg.com/monaco-editor@latest/min/'
+	};
+	importScripts('https://unpkg.com/monaco-editor@latest/min/vs/base/worker/workerMain.js');
+`], { type: 'text/javascript' }));
+
+require(["vs/editor/editor.main"], function () {
+	let editor = monaco.editor.create(document.getElementById('container'), {
+		value: [
+			'function x() {',
+			'\tconsole.log("Hello world!");',
+			'}'
+		].join('\n'),
+		language: 'javascript',
+		theme: 'vs-dark',
+    minimap: { enabled: true },
+    automaticLayout: true,
+
+
+	});
+  window.changeLang = lang => {
+    monaco.editor.setModelLanguage(window.monaco.editor.getModels()[0], lang);
+   // console.log(`model language was changed to ${editor.getModel().getLanguageIdentifier().language}`);
+}
+});
+  
+  
 </script>
+   
   </body>
 </html>

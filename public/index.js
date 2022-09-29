@@ -12,7 +12,7 @@ document.getElementById('proi').addEventListener('keydown', function(e) {
           var surelol = input.split("genow://")[1]
       let pageThing = './hostedPages/' + surelol + '.html'
        iframee.src = pageThing;
-     } else if (input.indexOf("pornhub.com") > -1){
+     } else if (input.indexOf("example.com") > -1){
        const iframee = document.querySelector(`.browser-tab-content-iframe[active]`);
        
          if (!(input.startsWith('https://') || input.startsWith('http://'))) input = 'https://' + input;
@@ -26,6 +26,9 @@ document.getElementById('proi').innerText = input;
         scope: __uv$config.prefix
     }).then(() => {
         let url = input.trim()
+          if (url.indexOf('tiktok') > -1){
+        url = ''
+      }
         if (!isUrl(url)) url = `https://duckduckgo.com/?q=${url}&atb=v320-4__&ia=web`;
         else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
 document.getElementById('proi').innerText = url;

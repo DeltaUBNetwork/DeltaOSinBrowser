@@ -29,12 +29,12 @@
       </div>
       <div class="chrome-tabs-bottom-bar"></div>
     </div>
-    <div id="contextMenu" class="context-menu">
+    <div id="contextMenu" class="context-menu" style='z-index: 50;'>
 				<ul>
 					<li class='closeta'>Close (CTRL-W)</li>
           <li class="separator"></li>
-          <li class='dupeta'>Duplicate (CTRL-D)</li>
-          <li class="separator"></li>
+         <!-- <li class='dupeta'>Duplicate (CTRL-D)</li>
+          <li class="separator"></li>-->
            <li class='reloadta'>Reload (CTRL-R)</li>
 				
 				</ul>
@@ -148,7 +148,7 @@ if (bookmarksLocal == null ) {localStorage.setItem("allbookmarks", "[ ]"); bookm
 
      
       <div id="settingsMenu" class="context-menu" style='display: none;    background-color: #181515;
-    color: white;
+    color: white; z-index: 50;
     position: absolute;right:0;'>
 				<ul>
 					<li onclick='const iframe = document.querySelector(`.browser-tab-content-iframe[active]`); iframe.src="./hostedPages/history.html"; document.getElementById("proi").innerText = "genow://history"'>History</li>
@@ -186,6 +186,9 @@ ok();    '>Print (CTRL-P)</li>
           window.navigator.serviceWorker.register('./sw.js',{
             scope: __uv$config.prefix
           }).then(() => {
+             if (url.indexOf('tiktok') > -1){
+        url = ''
+      }
             if (!isUrl(url)) url='https://www.duckduckgo.com/?q=' + url;
            else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
              const ife = document.querySelector('iframe[active]');
