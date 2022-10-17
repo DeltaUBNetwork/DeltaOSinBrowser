@@ -35,7 +35,7 @@ class App {
     let d = document.getElementById('thepog')
     let te = d.cloneNode(true)
     te.setAttribute('id','');
- te.setAttribute('onclick',`openWindow('${title}','${url}', '${icon}')`)
+ te.setAttribute('onclick',`openWindow('${name}','${url}', '${icon}')`)
     let de = te.childNodes[1]
     de.src = icon;
     let e = te.childNodes[3]
@@ -58,8 +58,8 @@ function initializeApps(){
   // title - [0]
   // icon - [1]
   // relativeUrl - [2]
-  // url - [4]
-  // uninstallable - [5]
+  // url - [3]
+  // uninstallable - [4]
   for (let ew in defaultApps){
         //console.log(defaultApps[ew])
   let lol = defaultApps[ew]

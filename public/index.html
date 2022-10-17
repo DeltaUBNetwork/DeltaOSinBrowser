@@ -165,7 +165,7 @@ let e = i*50
      
    <script>
      function openWindow(title, url,img){
-       
+       console.log(title,url,img)
           new WinBox({
        url: url,
        title: title,
@@ -192,11 +192,11 @@ x: "center",
                 
                   let temp = tempe.cloneNode(true);
                 temp.setAttribute('id',title + "the")
-               temp.setAttribute('onclick',`openWindow('${title}', url, '${icon}')`)
+               temp.setAttribute('onclick',`openWindow('${title}', '${url}', '${icon}')`)
                 // openWindow('Chromium',location.protocol + '//' + location.hostname + '/dex.html','https://google.com/favicon.ico')
                 
               let thet = temp.childNodes[1] 
-              thet.setAttribute("onclick",`openWindow('${title}', url, '${icon}')`)
+              thet.setAttribute("onclick",`openWindow('${title}', '${url}', '${icon}')`)
                 thet.setAttribute("src",img);
                   let ad = document.querySelector('.alltheicons')
         ad.appendChild(temp)

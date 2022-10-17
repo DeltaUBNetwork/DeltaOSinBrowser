@@ -499,6 +499,7 @@ background-color: transparent;
 .browser-tab-content-iframe {
   display: none;
   border: none;
+  background: white;
   height: calc(100vh - 91px);
   width: 100%;
   overflow: auto !important;
