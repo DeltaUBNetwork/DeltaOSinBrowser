@@ -35,7 +35,7 @@
     margin: 0;
     padding: 0; 
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
     scroll-behavior: smooth;
 
   }
@@ -297,7 +297,7 @@ width: 100%;
 
 .wb-title{
   text-shadow: 0px 3px rgba(0,0,0,.30);
-  color: rgb(247 247 247)
+  color: rgb(247 247 247);
   cursor: grab;
 }
 .wb-body{
@@ -508,10 +508,31 @@ background-color: transparent;
 .browser-tab-content-iframe[active] {
   display: block;
 }
+.daformlol{
+  display: flex;
+    justify-content: center;
+    position: relative;
+    outline: solid 0px transparent;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: rgb(0 0 0 / 25%) 0 1px;
+    background-color: #141212;
+    transition: 0.5s;
+    border-radius: 30px;
+    border-bottom: 3px solid blue;
+    border: 2px solid var(--nord8);
+    height: 48px;
+    width: 50%;
+    opacity: 1;
+}
+input:focus + .daformlol{
+  box-shadow: inset rgb(0 0 0 / 50%) 1px 1px 1px 1px;
+}
 .chrome-tabs {
   box-sizing: border-box;
   position: relative;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   font-size: 12px;
   height: 46px;
   padding: 8px 3px 4px 3px;
